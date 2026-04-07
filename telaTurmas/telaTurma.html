@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Turma</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <button onclick="voltar()">←</button>
+      <h1>Buscar Turma</h1>
+      <button onclick="irHome()">⌂</button>
+    </header>
+
+    <main class="main">
+
+      <section class="filters">
+        <select id="horario">
+          <option>Matutino</option>
+          <option>Vespertino</option>
+        </select>
+
+        <select id="ano">
+          <option>3º Fundamental</option>
+          <option>4º Fundamental</option>
+        </select>
+
+        <select id="turma">
+          <option>A</option>
+          <option>B</option>
+        </select>
+
+        <select id="professor">
+          <option>Lucia Maria</option>
+          <option>João</option>
+        </select>
+      </section>
+
+      <section class="result">
+        <h2>Resultado da sua Pesquisa</h2>
+
+        <div class="info">
+          <div>Turma: 3º A</div>
+          <div>Professor: Lucia</div>
+          <div>Período: Matutino</div>
+          <div>Horário: 8:30 - 12:30</div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>ALUNOS</h3>
+            <p>Gerencie a lista de alunos dessa turma.</p>
+            <div class="card-actions">
+              <button onclick="acaoAdicionar('Alunos')">Ver Alunos</button>
+              <button onclick="acaoAdicionar('Alunos')">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>EDITAR HORÁRIO</h3>
+            <p>Altere o horário das aulas dessa turma.</p>
+            <div class="card-actions">
+              <button onclick="acaoAdicionar('Horário')">Editar</button>
+              <button onclick="acaoAdicionar('Horário')">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>EDITAR PROFESSORES</h3>
+            <p>Gerencie os professores dessa turma.</p>
+            <div class="card-actions">
+              <button onclick="acaoAdicionar('Professores')">Gerenciar</button>
+              <button onclick="acaoAdicionar('Professores')">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>EDITAR SALA</h3>
+            <p>Altere ou consulte a sala vinculada a essa turma.</p>
+            <div class="card-actions">
+              <button onclick="acaoAdicionar('Sala')">Editar</button>
+              <button onclick="acaoAdicionar('Sala')">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <button class="cancel" onclick="cancelar()">Cancelar</button>
+      <button class="update" onclick="atualizar()">Atualizar</button>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

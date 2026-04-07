@@ -1,0 +1,209 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 100%; /* Largura 100% da tela */
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.header {
+  height: 70px;
+  background: #2764aa;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  padding: 30px 24px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.filters select {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #2764aa;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.filters select:focus {
+  border-color: #1f578b;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.result {
+  background: #2764aa;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.result h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info div {
+  background: #fff;
+  color: #2764aa;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-top: 20px; /* Margem no topo de cada card */
+}
+
+.card:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2764aa;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.card-actions button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #2764aa;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card-actions button:hover {
+  background: #1f578b;
+}
+
+/* FOOTER */
+.footer {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background: #2764aa;
+  position: relative;
+}
+
+.footer button {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel {
+  background: #e74c3c;
+  color: white;
+}
+
+.cancel:hover {
+  background: #c0392b;
+}
+
+.update {
+  background: #2764aa;
+  color: white;
+}
+
+.update:hover {
+  background: #1f578b;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 90%;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
